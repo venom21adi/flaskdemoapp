@@ -2,7 +2,7 @@ from azure.storage.blob import *
 accountName = "flaskdemoappstorage"
 accountKey = "prbvCQU0nU+u3/Svm8rL/+r3HZWUlSkzu7T5xHg8ihe3U08wxL+eQTC8PVIvf/AmQMHFbiJCufmA+AStoGmxGw=="
 containerName = "flaskdemoappcontainer"
-sas_Token ="sp=racwdli&st=2023-05-25T15:25:32Z&se=2023-05-25T23:25:32Z&spr=https&sv=2022-11-02&sr=c&sig=OSBDUVh8Pkg%2FHaZae%2BjIh0v5dphn1T3Eq42Mc3wusnk%3D"
+sas_Token ="?sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2023-05-25T23:34:36Z&st=2023-05-25T15:34:36Z&spr=https&sig=wFfO5qt6ZdMQWL5H5FxcVPtFSNBcr5p1jQrHfjdKi8g%3D"
 #blobName = "test3.json"
 import pandas as pd
 lst =[]
