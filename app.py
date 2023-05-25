@@ -1,9 +1,12 @@
 from flask import *
 import os
-from azure.storage.blob import BlobServiceClient
+#from azure.storage.blob import BlobServiceClient
 app = Flask(__name__)
+from azure.storage.blob import *
 
-
+accountName = "flaskdemoappstorage"
+accountKey = "prbvCQU0nU+u3/Svm8rL/+r3HZWUlSkzu7T5xHg8ihe3U08wxL+eQTC8PVIvf/AmQMHFbiJCufmA+AStoGmxGw=="
+blobService = BlockBlobService(account_name=accountName,account_key =accountKey)
 
 #connect_str = "DefaultEndpointsProtocol=https;AccountName=flaskdemoappstorage;AccountKey=prbvCQU0nU+u3/Svm8rL/+r3HZWUlSkzu7T5xHg8ihe3U08wxL+eQTC8PVIvf/AmQMHFbiJCufmA+AStoGmxGw==;EndpointSuffix=core.windows.net"
 #container_name = "flaskdemoappcontainer"
@@ -26,7 +29,7 @@ def index():
 @app.route('/page2')
 def page2():
     from script.test import test
-    x = test()
+    test()
     #y = str(os.getcwd())
     return "Executed"  
 """
