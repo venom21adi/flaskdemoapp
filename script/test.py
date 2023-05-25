@@ -1,6 +1,6 @@
 from azure.storage.blob import *
 accountName = "flaskdemoappstorage"
-accountKey = "prbvCQU0nU+u3/Svm8rL/+r3HZWUlSkzu7T5xHg8ihe3U08wxL+eQTC8PVIvf/AmQMHFbiJCufmA+AStoGmxGw=="
+#accountKey = "prbvCQU0nU+u3/Svm8rL/+r3HZWUlSkzu7T5xHg8ihe3U08wxL+eQTC8PVIvf/AmQMHFbiJCufmA+AStoGmxGw=="
 containerName = "flaskdemoappcontainer"
 #blobName = "test3.json"
 import pandas as pd
