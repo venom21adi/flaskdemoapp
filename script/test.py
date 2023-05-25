@@ -17,23 +17,23 @@ def test2():
 
 def test():
     # create data
-    head = ["col1" , "col2" , "col3"]
-    value = [[1 , 2 , 3],[4,5,6] , [8 , 7 , 9]]
-    df = pd.DataFrame (value, columns = head)
-    output = df.to_csv (index=False, encoding = "utf-8")
+    #head = ["col1" , "col2" , "col3"]
+    #value = [[1 , 2 , 3],[4,5,6] , [8 , 7 , 9]]
+    #df = pd.DataFrame (value, columns = head)
+    #output = df.to_csv (index=False, encoding = "utf-8")
     #print(output)
-    #lst = test2()
+    lst = test2()
     
     
-    #df = pd.DataFrame(lst)
+    df = pd.DataFrame(lst)
 
-    #output = df.to_csv("Test.csv")
+    output = df.to_csv(index = False,encoding="utf-8")
 
     connection_string=conn_str
     # Instantiate a new BlobServiceClient using a connection string
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     # Instantiate a new ContainerClient
-    container_client = blob_service_client.get_container_client('mycsv')
+    container_client = blob_service_client.get_container_client('mycsv2')
     try:
        # Create new Container in the service
        container_client.create_container()
