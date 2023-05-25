@@ -6,5 +6,4 @@ pytextrank
 scipy
 numpy
 csv
-fitz
 glob
