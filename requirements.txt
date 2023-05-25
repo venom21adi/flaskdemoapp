@@ -1,4 +1,6 @@
 flask
 pandas
 spacy
+heapq
+wordcloud
 
