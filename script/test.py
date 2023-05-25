@@ -24,5 +24,4 @@ def test():
 
     #blobService.create_blob_from_text(containerName, 'Test', output)
 
-    return None
     
