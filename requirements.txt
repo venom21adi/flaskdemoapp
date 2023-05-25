@@ -1,13 +1,2 @@
 flask
 pandas
-shutil
-spacy
-heapq
-wordcloud
-pytextrank
-re
-scipy
-numpy
-csv
-fitz
-glob
