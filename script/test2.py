@@ -23,21 +23,8 @@ def test():
 
     output = df.to_csv("Test.csv")
 
-    connection_string=conn_str
-    # Instantiate a new BlobServiceClient using a connection string
-    blob_service_client = BlobServiceClient.from_connection_string(connection_string)
-    # Instantiate a new ContainerClient
-    container_client = blob_service_client.get_container_client('mycsv')
-    try:
-       # Create new Container in the service
-       container_client.create_container()
-       properties = container_client.get_container_properties()
-    except ResourceExistsError:
-       print("Container already exists.")
+    blobService = BlockBlobService(account_name=accountName,account_key =accountKey)
 
-    # Instantiate a new BlobClient
-    blob_client = container_client.get_blob_client("output.csv")
-    # upload data
-    blob_client.upload_blob(output, blob_type="BlockBlob")
+    #blobService.create_blob_from_text(containerName, 'Test', output)
 
     
