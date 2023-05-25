@@ -2,14 +2,7 @@ from flask import *
 import os
 #from azure.storage.blob import BlobServiceClient
 app = Flask(__name__)
-from azure.storage.blob import *
 
-accountName = "flaskdemoappstorage"
-accountKey = "prbvCQU0nU+u3/Svm8rL/+r3HZWUlSkzu7T5xHg8ihe3U08wxL+eQTC8PVIvf/AmQMHFbiJCufmA+AStoGmxGw=="
-blobService = BlockBlobService(account_name=accountName,account_key =accountKey)
-
-#connect_str = "DefaultEndpointsProtocol=https;AccountName=flaskdemoappstorage;AccountKey=prbvCQU0nU+u3/Svm8rL/+r3HZWUlSkzu7T5xHg8ihe3U08wxL+eQTC8PVIvf/AmQMHFbiJCufmA+AStoGmxGw==;EndpointSuffix=core.windows.net"
-#container_name = "flaskdemoappcontainer"
 
 """
 blob_service_client = BlobServiceClient.from_connection_string(conn_str=connect_str) # create a blob service client to interact with the storage account
