@@ -8,12 +8,15 @@ conn_str = "DefaultEndpointsProtocol=https;AccountName=flaskdemoappstorage;Accou
 #blobName = "test3.json"
 import pandas as pd
 lst =[]
+lst2 = []
 
 def test2():
     for i in range(10):
         lst.append(i)
-        
-    return lst
+        lst2.append(i**2)
+    value = [lst,lst2]
+    df = pd.DataFrame(value)
+    return df
 
 def test():
     # create data
@@ -22,10 +25,10 @@ def test():
     #df = pd.DataFrame (value, columns = head)
     #output = df.to_csv (index=False, encoding = "utf-8")
     #print(output)
-    lst = test2()
+    df = test2()
     
     
-    df = pd.DataFrame(lst)
+    #df = pd.DataFrame(lst1)
 
     output = df.to_csv(index = False,encoding="utf-8")
 
