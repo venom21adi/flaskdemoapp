@@ -21,7 +21,7 @@ def test():
     value = [[1 , 2 , 3],[4,5,6] , [8 , 7 , 9]]
     df = pd.DataFrame (value, columns = head)
     output = df.to_csv (index=False, encoding = "utf-8")
-    print(output)
+    #print(output)
     #lst = test2()
     
     
