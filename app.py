@@ -1,5 +1,5 @@
 from flask import *
-
+import os
 app = Flask(__name__)
 
 
@@ -10,9 +10,10 @@ def index():
     
 @app.route('/page2')
 def page2():
-    #from script.test import test
-    #x = test()
-    return render_template('page2.html')    
+    from script.test import test
+    x = test()
+    y = os.getcwd()
+    return y    
 """
 @app.route('/')
 def index():
