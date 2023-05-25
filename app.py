@@ -12,7 +12,7 @@ def index():
 def page2():
     from script.test import test
     x = test()
-    y = os.getcwd()
+    y = str(os.getcwd())
     return y    
 """
 @app.route('/')
