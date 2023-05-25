@@ -16,12 +16,18 @@ def test2():
     return lst
 
 def test():
-
-    lst = test2()
+    # create data
+    head = ["col1" , "col2" , "col3"]
+    value = [[1 , 2 , 3],[4,5,6] , [8 , 7 , 9]]
+    df = pd.DataFrame (value, columns = head)
+    output = df.to_csv (index=False, encoding = "utf-8")
+    print(output)
+    #lst = test2()
     
-    df = pd.DataFrame(lst)
+    
+    #df = pd.DataFrame(lst)
 
-    output = df.to_csv("Test.csv")
+    #output = df.to_csv("Test.csv")
 
     connection_string=conn_str
     # Instantiate a new BlobServiceClient using a connection string
