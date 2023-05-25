@@ -1,4 +1,4 @@
-from azure.storage.blob import BlockBlobService
+#from azure.storage.blob import BlockBlobService
 accountName = "flaskdemoappstorage"
 accountKey = "prbvCQU0nU+u3/Svm8rL/+r3HZWUlSkzu7T5xHg8ihe3U08wxL+eQTC8PVIvf/AmQMHFbiJCufmA+AStoGmxGw=="
 containerName = "flaskdemoappcontainer"
