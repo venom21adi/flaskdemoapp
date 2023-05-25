@@ -22,6 +22,6 @@ def test():
 
     blobService = BlockBlobService(account_name=accountName, account_key=accountKey)
 
-    blobService.create_blob_from_text(containerName, 'Test', output)
+    #blobService.create_blob_from_text(containerName, 'Test', output)
 
     
