@@ -2,4 +2,10 @@ flask
 pandas
 spacy
 wordcloud
-
+pytextrank
+re
+scipy
+numpy
+csv
+fitz
+glob
