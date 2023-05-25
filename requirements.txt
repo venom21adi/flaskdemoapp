@@ -3,7 +3,6 @@ pandas
 spacy
 wordcloud
 pytextrank
-re
 scipy
 numpy
 csv
