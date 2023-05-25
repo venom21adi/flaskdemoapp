@@ -10,8 +10,8 @@ def index():
     
 @app.route('/page2')
 def page2():
-    from script.test import test
-    x = test()
+    #from script.test import test
+    #x = test()
     return render_template('page2.html')    
 """
 @app.route('/')
