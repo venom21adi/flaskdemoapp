@@ -19,9 +19,9 @@ def test():
     
     df = pd.DataFrame(lst)
 
-    output = df.to_csv("Test.csv")
+    #output = df.to_csv("Test.csv")
 
-    blobService = BlockBlobService(account_name=accountName, sas_token =sas_token)
+    blobService = BlockBlobService(account_name=accountName, account_key =accountKey)
 
     #blobService.create_blob_from_text(containerName, 'Test', output)
 
