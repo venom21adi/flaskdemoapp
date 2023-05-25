@@ -16,7 +16,7 @@ def test2():
         lst2.append(i**2)
     value = [lst,lst2]
     df = pd.DataFrame(value)
-    df = df.T
+    #df = df.T
     return df
 
 def test():
