@@ -1,2 +1,6 @@
 flask
 pandas
+shutil
+spacy
+heapq
+wordcloud
