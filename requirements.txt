@@ -5,5 +5,4 @@ wordcloud
 pytextrank
 scipy
 numpy
-csv
-glob
+fitz
