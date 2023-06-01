@@ -26,6 +26,7 @@ def page2():
     #y = str(os.getcwd())
     return "Executed"  
     
+@app.route('/page3')  
 def page3():
     #from script.test import test
     #test()
