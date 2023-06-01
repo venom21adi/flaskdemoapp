@@ -25,6 +25,12 @@ def page2():
     test()
     #y = str(os.getcwd())
     return "Executed"  
+    
+def page3():
+    #from script.test import test
+    #test()
+    #y = str(os.getcwd())
+    return render_template('page3.html') 
 """
 @app.route('/')
 def index():
