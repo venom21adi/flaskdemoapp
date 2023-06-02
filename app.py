@@ -34,6 +34,8 @@ def upload():
                 except:
                     pass
             os.remove(filename)
+    else:
+        pass
     return render_template("index.html", msg=msg)
 
 if __name__ == "__main__":
