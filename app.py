@@ -53,9 +53,12 @@ def list_blobs_flat():
     if request.method == 'POST':
         container_client = blob_service_client.get_container_client(container=container)
         blob_list = container_client.list_blobs()
+        x = list(blob_list)
         # for blob in blob_list:
         #     print(f"Name: {blob.name}")
-    return "blob_list"
+    else:
+        x = "No if condition"
+    return x
 
 if __name__ == "__main__":
     app.run()
