@@ -50,12 +50,13 @@ def upload():
 
 @app.route('/list', methods = ['POST'])
 def list_blobs_flat(blob_service_client, container):
-    container_client = blob_service_client.get_container_client(container=container)
-
-    blob_list = container_client.list_blobs()
-
-    for blob in blob_list:
-        print(f"Name: {blob.name}")
+    if request.method == 'POST':
+        container_client = blob_service_client.get_container_client(container=container)
+    
+        blob_list = container_client.list_blobs()
+    
+        for blob in blob_list:
+            print(f"Name: {blob.name}")
     return "Test"
 
 if __name__ == "__main__":
