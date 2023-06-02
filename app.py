@@ -18,6 +18,10 @@ blob_service_client = BlobServiceClient.from_connection_string(connect_str)
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in allowed_ext
+           
+@app.route('/')
+def index():
+    return render_template("index.html")         
 
 @app.route('/')
 def upload():
@@ -34,9 +38,7 @@ def upload():
                 except:
                     pass
             os.remove(filename)
-    else:
-        render_template("index.html")
-    return render_template("index.html")
+    return "File uploaded"
 
 if __name__ == "__main__":
     app.run()
