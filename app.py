@@ -63,21 +63,21 @@ def list_blobs_flat():
 if __name__ == "__main__":
     app.run()
 
-container_client = blob_service_client.get_container_client(container=container)
-blob_list = container_client.list_blobs()
-#x = "Inside"
-for blob in blob_list:
-     print(blob)
+# container_client = blob_service_client.get_container_client(container=container)
+# blob_list = container_client.list_blobs()
+# #x = "Inside"
+# for blob in blob_list:
+#      print(blob)
      
-depth = 0
-indent = "  "
-def list_blobs_hierarchical(self, container_client):
-    for blob in container_client.walk_blobs(delimiter='/'):
-        if isinstance(blob):
-            # Indentation is only added to show nesting in the output
-            print(f"{self.indent * self.depth}{blob.name}")
-            self.depth += 1
-            self.list_blobs_hierarchical(container_client, prefix=blob.name)
-            self.depth -= 1
-        else:
-            print(f"{self.indent * self.depth}{blob.name}")
+# depth = 0
+# indent = "  "
+# def list_blobs_hierarchical(self, container_client):
+#     for blob in container_client.walk_blobs(delimiter='/'):
+#         if isinstance(blob):
+#             # Indentation is only added to show nesting in the output
+#             print(f"{self.indent * self.depth}{blob.name}")
+#             self.depth += 1
+#             self.list_blobs_hierarchical(container_client, prefix=blob.name)
+#             self.depth -= 1
+#         else:
+#             print(f"{self.indent * self.depth}{blob.name}")
