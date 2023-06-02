@@ -23,7 +23,7 @@ def allowed_file(filename):
 def index():
     return render_template("index.html")         
 
-@app.route('/upload')
+@app.route('/upload', methods = ['POST'])
 def upload():
     if request.method == 'POST':
         img = request.files['file']
