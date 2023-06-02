@@ -58,7 +58,7 @@ def list_blobs_flat():
         #     print(f"Name: {blob.name}")
     else:
         x = "No if condition"
-    return x
+    return blob_list
 
 if __name__ == "__main__":
     app.run()
