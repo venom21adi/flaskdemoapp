@@ -56,6 +56,7 @@ def list_blobs_flat(blob_service_client, container):
 
     for blob in blob_list:
         print(f"Name: {blob.name}")
+    return "Test"
 
 if __name__ == "__main__":
     app.run()
