@@ -49,9 +49,13 @@ def upload():
     return render_template("list_file.html")
 
 @app.route('/list', methods = ['POST'])
-def list_blobs():
-    list_blobs_flat(blob_service_client, container)
-    return None
+def list_blobs_flat(blob_service_client, container):
+    container_client = blob_service_client.get_container_client(container=container)
+
+    blob_list = container_client.list_blobs()
+
+    for blob in blob_list:
+        print(f"Name: {blob.name}")
 
 if __name__ == "__main__":
     app.run()
