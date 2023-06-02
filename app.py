@@ -54,11 +54,11 @@ def list_blobs_flat():
         container_client = blob_service_client.get_container_client(container=container)
         blob_list = container_client.list_blobs()
         x = "Inside"
-        # for blob in blob_list:
-        #     print(f"Name: {blob.name}")
+        for blob in blob_list:
+             print(f"Name: {blob.name}")
     else:
         x = "No if condition"
-    return blob_list
+    return "Test"
 
 if __name__ == "__main__":
     app.run()
