@@ -30,7 +30,7 @@ def upload():
         if img and allowed_file(img.filename):
             filename = secure_filename(img.filename)
             img.save(filename)
-            blob_client = blob_service_client.get_blob_client(container = container, blob = filename)
+            blob_client = blob_service_client.get_blob_client(container = container, blob = "//test//"+filename)
             with open(filename, "rb") as data:
                 try:
                     blob_client.upload_blob(data, overwrite=True)
