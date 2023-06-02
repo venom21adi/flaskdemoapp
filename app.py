@@ -55,7 +55,7 @@ def list_blobs_flat():
         blob_list = container_client.list_blobs()
         # for blob in blob_list:
         #     print(f"Name: {blob.name}")
-    return blob_list
+    return "blob_list"
 
 if __name__ == "__main__":
     app.run()
