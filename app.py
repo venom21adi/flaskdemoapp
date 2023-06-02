@@ -19,6 +19,14 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in allowed_ext
            
+def list_blobs_flat(blob_service_client, container):
+    container_client = blob_service_client.get_container_client(container=container)
+
+    blob_list = container_client.list_blobs()
+
+    for blob in blob_list:
+        print(f"Name: {blob.name}")
+           
 @app.route('/')
 def index():
     return render_template("index.html")         
@@ -38,7 +46,12 @@ def upload():
                 except:
                     pass
             os.remove(filename)
-    return os.getcwd()
+    return render_template("list_file.html")
+
+@app.route('/list', methods = ['POST'])
+def list_blobs():
+    list_blobs_flat(blob_service_client, container)
+    return None
 
 if __name__ == "__main__":
     app.run()
