@@ -48,7 +48,7 @@ def upload():
             os.remove(filename)
     return render_template("list_file.html")
 
-@app.route('/list', methods = ['POST'])
+@app.route('/listx', methods = ['POST'])
 def list_blobs_flat(blob_service_client, container):
     if request.method == 'POST':
         container_client = blob_service_client.get_container_client(container=container)
