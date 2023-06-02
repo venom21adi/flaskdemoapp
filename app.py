@@ -38,7 +38,7 @@ def upload():
                 except:
                     pass
             os.remove(filename)
-    return "File uploaded"
+    return os.getcwd()
 
 if __name__ == "__main__":
     app.run()
