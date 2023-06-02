@@ -19,7 +19,7 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in allowed_ext
 
-@app.route('/upload',methods=['POST'])
+@app.route('/',methods=['POST'])
 def upload():
     if request.method == 'POST':
         img = request.files['file']
