@@ -49,7 +49,7 @@ def upload():
     return render_template("list_file.html")
 
 @app.route('/listx', methods = ['POST'])
-def list_blobs_flat(blob_service_client, container):
+def list_blobs_flat():
     if request.method == 'POST':
         container_client = blob_service_client.get_container_client(container=container)
         blob_list = container_client.list_blobs()
